@@ -1,0 +1,12 @@
+https://auth.komoot.de/oauth/token?redirect_uri=YOUR_REDIRECT_URL&grant_type=authorization_code&code=CODE
+
+
+curl -X "POST" "https://auth.komoot.de/oauth/token?redirect_uri=YOUR_REDIRECT_URL&grant_type=authorization_code&code=16e3734a3b1nDSZJ3arMywH" \
+     -H 'Accept: application/json' \
+     -u 'tomasz-szarynski-6hb28s:ooz9beemohxi7ah8eisaireav'
+     
+     {"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzI5ODM5MDAsInVzZXJfbmFtZSI6IjE1NDI1MDc2NzI1MCIsImp0aSI6IjE3NjNkMWVkLTJmNTgtNDE5NS1iMzY1LTZhMDJlOTBhYjBlMSIsImNsaWVudF9pZCI6InRvbWFzei1zemFyeW5za2ktNmhiMjhzIiwic2NvcGUiOlsicHJvZmlsZSJdLCJ1c2VybmFtZSI6IjE1NDI1MDc2NzI1MCJ9.nnCMDXLsVTC1CmASNi0QLg2X5pq-xOawvTeVqEgm_irzReDtsM2Omdcw9WBwUNP66R6H_vowTjzhDwljsh8oUOjvSP1LRbtfJv8bZZ70cu0NPReMPKgtd1lNJCiig92ARUuUCrfIfxm1Rkjt8Hm1GkEHtIQAUhwMZg5sT5DPmgQ2bBrz1VRrLLSCqUhmXC8RiOcF5i8vd3iuNOnAppCqOvXz4ax9KBqSX1nqVEp_GAMVvatFkS4iMpTjdyvY9Vr0mJnHzzdZYKDKzpwJ3ZNla_WbSEQGYOoHOFXmVx6fmUn2ClCVgTN8jl6PyZenKMnD6oTgFGEyi6ODLo5gUJ5_Kg","token_type":"bearer","refresh_token":"/154250767250/tomasz-szarynski-6hb28s/4e00cced-d3b3-4151-95fb-8fe9596e9ab9","expires_in":1799,"scope":"profile","username":"154250767250","jti":"1763d1ed-2f58-4195-b365-6a02e90ab0e1"}
+     
+     
+curl "https://external-api.komoot.de/v007/users/154250767250/tours/" \
+     -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzI5ODM5MDAsInVzZXJfbmFtZSI6IjE1NDI1MDc2NzI1MCIsImp0aSI6IjE3NjNkMWVkLTJmNTgtNDE5NS1iMzY1LTZhMDJlOTBhYjBlMSIsImNsaWVudF9pZCI6InRvbWFzei1zemFyeW5za2ktNmhiMjhzIiwic2NvcGUiOlsicHJvZmlsZSJdLCJ1c2VybmFtZSI6IjE1NDI1MDc2NzI1MCJ9.nnCMDXLsVTC1CmASNi0QLg2X5pq-xOawvTeVqEgm_irzReDtsM2Omdcw9WBwUNP66R6H_vowTjzhDwljsh8oUOjvSP1LRbtfJv8bZZ70cu0NPReMPKgtd1lNJCiig92ARUuUCrfIfxm1Rkjt8Hm1GkEHtIQAUhwMZg5sT5DPmgQ2bBrz1VRrLLSCqUhmXC8RiOcF5i8vd3iuNOnAppCqOvXz4ax9KBqSX1nqVEp_GAMVvatFkS4iMpTjdyvY9Vr0mJnHzzdZYKDKzpwJ3ZNla_WbSEQGYOoHOFXmVx6fmUn2ClCVgTN8jl6PyZenKMnD6oTgFGEyi6ODLo5gUJ5_Kg'
